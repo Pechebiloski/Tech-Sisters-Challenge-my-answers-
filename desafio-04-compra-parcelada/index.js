@@ -9,7 +9,7 @@ const LIMITE_PARCELAMENTO = 250;
 const NUMERO_PARCELAS = 5;
 
 function formatarReais(valor) {
-  return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+  return `R$ ${valor.toFixed(2).replace(".", ",")}`;
 }
 
 function avaliarParcelamento(valorProduto1, valorProduto2) {
